@@ -26,9 +26,15 @@ Deploy
 		```
 * execute `clean.py` to clean.
 
+Download
+--------
+
+[dbphotos.exe](https://add110.opendrive.com/files?67945224_v2cnM)
+
 Change log
 ----------
 
 2013-02-25 --r1--
 
-* First alpha release	
+* Fixed issue that fail to next album page
+* First alpha release

@@ -42,7 +42,8 @@ class Html(object):
 		return photoes
 
 	def next_url(self):
-		category = self.dbpurl.category
+		dbpurl = self.dbpurl
+		category = dbpurl.category
 		html = self.html
 		next = None
 		# url for previewing the album 
