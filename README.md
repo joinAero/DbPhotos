@@ -7,8 +7,8 @@ Deploy
 -----
 
 [pyr_lnk]: https://pypi.python.org/pypi/pyreadline
-[pyi_lnk]: https://pypi.python.org/pypi/pyreadline
-[py2_lnk]: https://pypi.python.org/pypi/pyreadline
+[pyi_lnk]: http://www.pyinstaller.org/
+[py2_lnk]: http://www.py2exe.org/
 
 * setup [pyreadline][pyr_lnk].
 
@@ -36,5 +36,6 @@ Change log
 
 2013-02-25 --r1--
 
+* Amend websites' link in `README.md`
 * Fixed issue that fail to next album page
 * First alpha release
