@@ -29,15 +29,16 @@ Deploy
 Download
 --------
 
-[dbphotos_r1.exe](https://add110.opendrive.com/files?67945224_v2cnM)
+[dbphotos.exe](https://add110.opendrive.com/files?67994302_U9x9W)
 
 Change log
 ----------
 
+* Amend `dbphotos.exe` link in `README.md`
 * Fixed error when creating dir with special chars
 
 2013-02-25 --r1--
 
-* Amend websites' link in `README.md`
+* Amend website links in `README.md`
 * Fixed issue that fail to next album page
 * First alpha release
