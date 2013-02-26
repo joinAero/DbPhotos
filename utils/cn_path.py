@@ -5,6 +5,7 @@ Helper functions for handling chinese path.
 """
 
 import os
+import re
 from os import path
 
 __all__ = ['u2c', 'make_dirs', 'make_dirs_cn', 'join_cn']
@@ -18,11 +19,18 @@ def _encode(s, oldcode, newcode):
 def u2c(s):
 	return _encode(s, 'utf8', 'gbk') # gbk or cp936
 
+def _sub_special_chars(p):
+	return re.sub(r'[\\/:*?"<>|]', '', p)
+
 def make_dirs(dirpath):
 	"""Make a directory."""
 	if path.isdir(dirpath):
 		return dirpath
-	os.makedirs(dirpath)
+	try:
+		os.makedirs(dirpath)
+	except OSError:
+		dirpath = _sub_special_chars(dirpath)
+		return make_dirs(dirpath)
 	return dirpath
 
 def make_dirs_cn(dirpath_utf8):
@@ -43,3 +51,6 @@ if __name__ == '__main__':
 	for dirpath in dirpaths:
 		path_cn = make_dirs_cn(dirpath)
 		make_dirs(join_cn(path_cn, '测试', 'test'))
+
+	special_path = r'a\b/c:d*e?f"g<h>i|j'
+	print(_sub_special_chars(special_path))

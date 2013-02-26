@@ -37,13 +37,13 @@ def parse_html(dbpurl):
 
 	out_dir = html.get_title()
 
-	# create album
-	u2c_print('\n创建相册 %s' % out_dir)
-	counter = 0
-
 	# enter album
 	cn_dirpath = make_dirs_cn(out_dir)
 	os.chdir(cn_dirpath)
+
+	# create album
+	print(u2c('\n创建相册 ') + cn_dirpath)
+	counter = 0
 
 	# download
 	photoes = html.get_photoes()

@@ -29,10 +29,12 @@ Deploy
 Download
 --------
 
-[dbphotos.exe](https://add110.opendrive.com/files?67945224_v2cnM)
+[dbphotos_r1.exe](https://add110.opendrive.com/files?67945224_v2cnM)
 
 Change log
 ----------
+
+* Fixed error when creating dir with special chars
 
 2013-02-25 --r1--
 
